@@ -37,7 +37,7 @@ client_room:
 .created  
 .modified  
 
-rooms:
+rooms:  
 .id  
 .price  
 .description  
