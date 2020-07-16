@@ -6,7 +6,7 @@ This is a fictitious project, to try new things. Feel free to join, the purpose 
 
 #### Concept:
 
-It's a Hotel Management System, the version 1 should contain these functionalities:
+It's a Hotel Management System, the index 1 should contain these functionalities:
 
 - Clients Management
 - Rooms Management
