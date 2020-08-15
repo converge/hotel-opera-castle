@@ -8,7 +8,7 @@ This is a fictitious project, to try new things. Feel free to join, the purpose 
 
 It's a Hotel Management System, the index 1 should contain these functionalities:
 
-- Clients Management
+- Users Management
 - Rooms Management
 - Check In
 - Check Out
@@ -19,18 +19,18 @@ It's a Hotel Management System, the index 1 should contain these functionalities
 - PostgreSQL
 - libs: jest, db-migrate
 
-#### Database ERM
+### Database ERM
 
-clients:  
+Users:  
 .id  
 .first name  
 .last name  
 .created  
 .modified  
 
-client_room:  
+user_room:  
 .id  
-.client_id  
+.user_id  
 .room_id  
 .check_in  
 .check_out  
@@ -41,9 +41,27 @@ rooms:
 .id  
 .price  
 .description  
-.client_id  
+.user_id  
 .created  
 .modified  
+
+### API Definition
+
+### Version
+
+| Endpoint | Verb | Description | Authenticated | role admin | role client |
+|---|---|---|---|---|---|
+| / | GET | API Version | | | |
+
+#### Users
+
+| endpoint | Verb | Description | Authenticated | role admin | role client |
+|---|---|---|---|---|---|
+| /users | GET | List All Users | x | x | |
+| /users/{id} | GET | List one User | x | x | x |
+| /users | POST | Create Users | | | |
+| /users/{id} | DELETE | Delete a User | x | x | x |
+
 
 #### Version goals
 
