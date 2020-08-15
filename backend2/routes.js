@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const authMiddleware = require('./middlewares/auth');
 
 router.get('/', (req, res) => {
   res.send('it works!');
@@ -8,7 +9,7 @@ router.get('/', (req, res) => {
 router.get('/anonymoys', (req, res) => {
   res.send('Hello Anonymous!')
 });
-router.get('/user', (req, res) => {
+router.get('/user', authMiddleware, (req, res) => {
   res.send('Hello user!')
 });
 router.get('/admin', (req, res) => {

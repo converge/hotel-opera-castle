@@ -1,3 +1,5 @@
 const app = require('./app');
 
-app().listen(3000, () => console.log('Running ...'));
+const NODE_PORT=3000;
+
+app().listen(NODE_PORT, () => console.log(`Running at Port ${NODE_PORT} ...`));
