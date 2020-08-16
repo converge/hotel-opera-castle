@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: opera-castle-api
+spec:
+  type: NodePort
+  ports:
+    - name: htttp
+      port: 3000
+      targetPort: 3000
+  selector:
+    app: opera-hotel-api
