@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: opera-castle-api
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: htttp
       port: 3000
