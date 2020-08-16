@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opera-hotel-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: opera-hotel-api
+  template:
+    metadata:
+      labels:
+        name: opera-hotel-api
+    spec:
+      containers:
+        - name: application
+          image: joaovanzuita/opera-castle-hotel
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
